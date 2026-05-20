@@ -1,0 +1,41 @@
+/*css*/
+ *{
+	 margin:0;
+	 padding:0;
+	 font-family:Time New roman;
+	 font-size:15px;
+	 line-height:2.0;
+	 color:white;
+ }
+ div.container{
+	 margin:70px;
+	 background-color:#FF1493;
+	 padding:50px;
+ }
+ #title{
+	 font-size:40px;
+	 text-transform:uppercare;
+	 letter-spacing:2.0px;
+	 text-align:center;
+	 color:black;
+ }
+ form#frmLogin{
+	 background-color:#00BFFF;
+	 padding:20px;
+	 margin:15px;
+ }
+
+label{
+	display:block;
+}
+
+input.form-control{
+	width:50%;
+}
+input.form-button{
+	color:black;
+	width:10%;
+}	
+div.form-vitri{
+	color:black;
+}
