@@ -12,66 +12,14 @@
             <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 
             <!-- Latest compiled JavaScript -->
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
-            </script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+            <script src="../js/lib.js/java.js"></script>
 
             </div>
 		
 		</div>
         <script>
-                const listProducts = document.getElementById("products-list");
-
-                // Tạo 1 continer chứa products-list
-                const item = document.createElement("div");
-                item.setAttribute("class","item");
-                
-                // Tạo khung chứa ảnh và thong tin
-
-                // Tọa khung chứa ảnh 
-                const containerImage = document.createElement ("div"); //<div></div>
-                containerImage.setAttribute("class", "item");
-                // Tạo ảnh
-                const img = document.createElement("img");
-                img.setAttribute("src","../acssets/images/chocon.webp");
-                img.setAttribute("alt","hình con chó");
-                img.setAttribute("style","width: 100% ; max-width: 150px");
-
-                // Đưa vào khung chứa ảnh
-                containerImage.appendChild(img);
-
-                //Tọa 1 container có thong tin sản phẩm có class và info
-                const containerInfo = document.createElement("div");
-                containerInfo.setAttribute("class","info");
-
-                //Tạo <p> chứa tên sản phẩm
-                const name = document.createElement("p");
-                name.innerHTML = "Chó Chihuahua";
-
-                const price = document.createElement("p");
-                price.innerHTML = "5 xị";
-
-                const description = document.createElement("p");
-                description.innerHTML = "Mắt lòi và nhiều chuyện";
-
-                // Tạo <a> chứa link chi tiết sản phẩm
-                const linkProduct = document.createElement("a");
-                linkProduct.innerHTML = "Xem chi tiết";
-                linkProduct.setAttribute("href","page1.html");
-
-                // Gán vào khung chứa info
-                containerInfo.appendChild(name);
-                containerInfo.appendChild(price);
-                containerInfo.appendChild(description);
-                containerInfo.appendChild(linkProduct);
-
-                
-                // Thêm khung chứa img và item
-                item.appendChild(containerImage);
-                item.appendChild(containerInfo);
-
-                //Thêm item vào list product
-                listProducts.appendChild(item);
-
+        loadAllProducts(products);
         </script>
 	</body>
 </html>
