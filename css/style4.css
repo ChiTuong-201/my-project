@@ -1,10 +1,40 @@
-/*css*/
- *{
-	 margin:0;
-	 padding:0;
-	 font-family:Time New roman;
-	 font-size:15px;
-	 line-height:2.0;
-	 color:black;
- }
- }
+#container{
+    width: 700px;
+    margin: 30px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+/* Khung chứa ảnh */
+#image{
+    width: 350px;
+    height: 350px;
+    margin: 0 auto;
+    border: 3px solid #1b0cee;
+    border-radius: 15px;
+    background-color: #d3206b;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+}
+#price
+{
+	font-size:30px;
+	font-weight:40px;
+	color:rgb(236, 10, 10);
+	
+}
+
+/* Ảnh */
+#image{
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 20px;
+}

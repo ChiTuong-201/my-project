@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html lang = "vi">
+	<head>
+		<title> Chi Tiết Sản Phẩm</title>
+		<meta charset= "utf-8"> 
+        <link rel = "stylesheet" href = "../css/style4.css">
+        <script src = "../js/lib.js/java.js"></script>
+    </head>
+    <body>
+        <div class ="container" id ="container">
+            <img src = "../acssets/images/conmeo.jpg" alt = "" id ="image">
+            <p id ="name"></p>
+            <p id = "price"></p>
+            <p id = "mtct"></p>
+            <p id ="description"></p>
+            <a href ="../html/page8.html "class ="back-btn"><button>
+              <-Quay Lại  
+            </button></a>
+        </div>
+        <script>
+            //1.Lấy Id Từ URL
+            const urlParams = new URLSearchParams(window.location.search);
+            const productId = urlParams.get('masp');
+            // Tim San Pham
+            const foundProduct = products.find(
+                obj => obj.id.trim() === productId.trim());
+            // Hien Thi Du Lieu Ra Giao Dien
+            if(foundProduct){
+                document.getElementById("name").innerText = foundProduct.name;
+                document.getElementById("price").innerText = foundProduct.price;
+                document.getElementById("mtct").innerText = "Mô Tả Chi Tiết :"+ foundProduct.mtct;
+                document.getElementById("description").innerText = foundProduct.description;
+                document.getElementById("image").src = foundProduct.image;
+            }else{
+                document.getElementById("container").innerHTML = '<h2> san pahm khòn ton tai hoac da ngung kinh doanh</h2> <a href = "../index.html">Quay Lai Trang Chu"</a>'
+            }
+
+        </script>
+    </body>
